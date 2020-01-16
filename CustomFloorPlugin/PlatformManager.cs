@@ -120,14 +120,15 @@ namespace CustomFloorPlugin {
                 if(!GetCurrentEnvironment().name.StartsWith("Menu")) {
                     try {
                         FindManager();
-                        if(!Resources.FindObjectsOfTypeAll<PlayerDataModelSO>()[0].playerData.overrideEnvironmentSettings.overrideEnvironments) {
+                        //Commented out as requested
+                        //if(!Resources.FindObjectsOfTypeAll<PlayerDataModelSO>()[0].playerData.overrideEnvironmentSettings.overrideEnvironments) {
                             InternalTempChangeToPlatform();
                             PlatformLoader.AddManagers();
                             SpawnCustomLights();
                             Instance.StartCoroutine(ReplaceAllMaterialsAfterOneFrame());
                             EnvironmentArranger.RearrangeEnvironment();
                             TubeLightManager.CreateAdditionalLightSwitchControllers();
-                        }
+                        //}
                     } catch(ManagerNotFoundException e) {
                         Plugin.Log(e);
                     }
