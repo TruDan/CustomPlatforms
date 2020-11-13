@@ -189,7 +189,7 @@ namespace CustomFloorPlugin {
                 } else {
                     platformSpawned = false;
                     Heart.SetActive(Settings.ShowHeart);
-                    Heart.GetComponent<LightWithId>().ColorWasSet(Color.magenta);
+                    Heart.GetComponent<LightWithIdMonoBehaviour>().ColorWasSet(Color.magenta);
                 }
             } catch(EnvironmentSceneNotFoundException) { }
         }
@@ -358,7 +358,7 @@ namespace CustomFloorPlugin {
                 Heart.transform.rotation = rotation;
                 Heart.transform.localScale = scale;
 
-                Heart.GetComponent<LightWithId>().ColorWasSet(Color.magenta);
+                Heart.GetComponent<LightWithIdMonoBehaviour>().ColorWasSet(Color.magenta);
                 Heart.SetActive(Settings.ShowHeart);
             }
         }

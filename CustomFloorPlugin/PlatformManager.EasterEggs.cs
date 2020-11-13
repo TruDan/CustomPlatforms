@@ -28,7 +28,7 @@ namespace CustomFloorPlugin {
                 if(Input.GetKeyDown(KeyCode.Keypad0)) {
                     Log();
                     Heart.SetActive(false);
-                    Heart.GetComponent<LightWithId>().SetField("_lightManager", FindLightWithIdManager(GetCurrentEnvironment()));
+                    Heart.GetComponent<LightWithIdMonoBehaviour>().SetField("_lightManager", FindLightWithIdManager(GetCurrentEnvironment()));
                     Heart.SetActive(true);
                 }                
             }

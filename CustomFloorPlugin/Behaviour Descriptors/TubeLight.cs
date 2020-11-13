@@ -111,8 +111,8 @@ namespace CustomFloorPlugin
                 if (lightWithId)
                 {
                     lightWithId.SetField("_tubeBloomPrePassLight", tubeBloomLight);
-                    ((LightWithId)lightWithId).SetField("_ID", (int)lightsID);
-                    ((LightWithId)lightWithId).SetField("_lightManager", lightManager);
+                    ((LightWithIdMonoBehaviour)lightWithId).SetField("_ID", (int)lightsID);
+                    ((LightWithIdMonoBehaviour)lightWithId).SetField("_lightManager", lightManager);
                 }
 
                 tubeBloomLight.SetField("_width", width * 2);
@@ -144,8 +144,8 @@ namespace CustomFloorPlugin
                 iHeartBeatSaber.transform.localScale = Vector3.one;
                 iHeartBeatSaber.transform.rotation = transform.rotation;
                 InstancedMaterialLightWithId lightWithId = iHeartBeatSaber.GetComponent<InstancedMaterialLightWithId>();
-                ((LightWithId)lightWithId).SetField("_ID", (int)lightsID);
-                ((LightWithId)lightWithId).SetField("_lightManager", lightManager);
+                ((LightWithIdMonoBehaviour)lightWithId).SetField("_ID", (int)lightsID);
+                ((LightWithIdMonoBehaviour)lightWithId).SetField("_lightManager", lightManager);
                 lightWithId.SetField("_minAlpha", 0f);
                 iHeartBeatSaber.GetComponent<MeshFilter>().mesh = GetComponent<MeshFilter>().mesh;
                 iHeartBeatSaber.SetActive(true);
